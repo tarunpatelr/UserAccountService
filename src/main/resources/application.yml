@@ -1,0 +1,67 @@
+logging:
+  level:
+    ROOT: INFO
+spring:
+  application:
+    name: account-service
+  rabbitmq:
+      password: account_m$g_pRd_123
+      username: AccountMessageProducer
+  data:
+    mongodb:
+      host: 192.168.99.100
+      port: 30017
+user:
+  account:
+    service:
+      baseUrl: http://account-service
+      exchange:
+        name: user.account.exchange
+      routingKey:
+        prefix: user.account.
+order:
+  service:
+    baseUrl: http://order-service
+    exchange:
+      name: order.exchange
+    routingKey:
+      prefix: order.
+
+#endpoints:
+#  autoconfig:
+#    enabled: true
+#    id: autoconfig
+#    sensitive: false
+#  beans:
+#    enabled: true
+#    id: beans
+#    sensitive: false
+#  configprops:
+#    enabled: true
+#    id: configprops
+#    sensitive: false
+#  dump:
+#    enabled: true
+#    id: dump
+#    sensitive: false
+#  env:
+#    enabled: true
+#    id: env
+#    sensitive: false
+#  health:
+#    sensitive: false
+#  mappings:
+#    enabled: true
+#    id: mappings
+#    sensitive: false
+#  metrics:
+#    enabled: true
+#    id: metrics
+#    sensitive: false
+#  trace:
+#    enabled: true
+#    id: trace
+#    sensitive: false
+#  shutdown:
+#    enabled: true
+#    sensitive: false
